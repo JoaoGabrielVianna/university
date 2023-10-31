@@ -1,0 +1,15 @@
+#main_login {
+    min-width: 360px;
+    min-height: 100vh;
+    background-color: #020913;
+}
+
+#main_login .container {
+    width: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}

@@ -1,0 +1,31 @@
+#main_inputBox{
+    width: 300px;
+    height: 45px;
+    justify-content: flex-start;
+    gap: 10px;
+    border-radius: 15px;
+    background-color: #E3E3E3;
+    
+}
+
+#main_inputBox span{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#main_inputBox input{
+    font-size: 14px;
+    z-index: 1;
+    background-color: transparent;
+    border: 0;
+}
+
+#inputBox_background{
+    position: absolute;
+    z-index: 0;
+}
