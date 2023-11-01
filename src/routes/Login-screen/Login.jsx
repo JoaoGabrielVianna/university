@@ -20,6 +20,10 @@ import { AuthGoogleContext } from "../../contexts/authGoogle";
 export default function Login_Screen() {
     const { signInGoogle, signed } = useContext(AuthGoogleContext)
 
+    async function loginGoogle(){
+        await signInGoogle();
+    }
+
     if(signed){
         return <Navigate to="/home"/>
     }
@@ -39,7 +43,7 @@ export default function Login_Screen() {
                             <span></span>
                         </div>
                         <div className="icons">
-                            <a><img src={google} alt="" onClick={() => signInGoogle()} /></a>
+                            <a><img src={google} alt="" onClick={() => loginGoogle()} /></a>
                             <a style={{ opacity: 0.3 }}><img src={facebook} alt="" onClick={() => { }} /></a>
                             <a style={{ opacity: 0.3 }}><img src={mobile} alt="" onClick={() => { }} /></a>
                             <a style={{ opacity: 0.3 }}><img src={outlook} alt="" onClick={() => { }} /></a>
