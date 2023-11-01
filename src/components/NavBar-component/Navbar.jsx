@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./NavBar.css";
+// import "./NavBar.css";
 import { Link } from "react-router-dom";
 import Faculdade_Icon from "./icons-component/faculdade-icon";
 import Destaques_Icon from "./icons-component/destaques-icon";
