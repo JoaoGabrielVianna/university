@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import './Login.css';
 import { FacebookAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 
@@ -8,11 +9,11 @@ import ButtonLogin from "../../components/ButtonLogin-component/ButtonLogin";
 import Email_icon from "../../icons/email-icon/Email";
 import Password_icon from "../../icons/password-icon/Password";
 import GoBack_icon from "../../icons/goback-icon/GoBack";
-import { app } from "../../services/firebaseConfig";
 import google from '../../assets/imgs/google-icon.png';
 import facebook from '../../assets/imgs/facebook-icon.png'
 import mobile from '../../assets/imgs/mobile-icon.png'
 import outlook from '../../assets/imgs/outlook-icon.png'
+import { app } from "../../services/firebaseConfig";
 
 
 const provider = new GoogleAuthProvider();
@@ -21,6 +22,7 @@ const provider = new GoogleAuthProvider();
 
 
 export default function Login_Screen() {
+
     const auth = getAuth(app);
 
     const signInGoogle = () => {
@@ -29,18 +31,17 @@ export default function Login_Screen() {
                 const credential = GoogleAuthProvider.credentialFromResult(result);
                 const token = credential.accessToken;
                 const user = result.user;
-                console.log(user)
+                console.log(user);
 
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 const email = error.customData.email;
                 const credential = GoogleAuthProvider.credentialFromError(error);
+
             });
     }
 
-
-    
     return (
         <>
             <main id="main_login">
@@ -56,10 +57,10 @@ export default function Login_Screen() {
                             <span></span>
                         </div>
                         <div className="icons">
-                            <a><img src={google} alt=""  onClick={signInGoogle}/></a>
-                            <a style={{opacity: 0.3}}><img src={facebook} alt=""  onClick={() => {}}/></a>
-                            <a style={{opacity: 0.3}}><img src={mobile} alt=""  onClick={() => {}}/></a>
-                            <a style={{opacity: 0.3}}><img src={outlook} alt=""  onClick={() => {}}/></a>
+                            <a><img src={google} alt="" onClick={signInGoogle} /></a>
+                            <a style={{ opacity: 0.3 }}><img src={facebook} alt="" onClick={() => { }} /></a>
+                            <a style={{ opacity: 0.3 }}><img src={mobile} alt="" onClick={() => { }} /></a>
+                            <a style={{ opacity: 0.3 }}><img src={outlook} alt="" onClick={() => { }} /></a>
                         </div>
                     </main>
 
