@@ -47,8 +47,8 @@ export default function Error_Screen() {
         <>
             <main id="main_error">
                 <img src={Error404} alt="ERROR 404" />
-                <ERROR_animation/>
-                <Link to={'/'}><ButtonReturn/></Link>
+                <ERROR_animation />
+                <Link to={'/'}><ButtonReturn /></Link>
             </main>
         </>
     )
