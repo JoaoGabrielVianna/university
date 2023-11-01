@@ -12,3 +12,59 @@
     align-items: center;
     gap: 15px;
 }
+
+#main_login .goback_icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+
+#login_button[disabled]{
+    opacity: 0;
+}
+
+#main_socialLogin{
+    min-width: 300px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+}
+
+#main_socialLogin .line{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#main_socialLogin .line span{
+    width: 128px;
+    height: 2px;
+
+    background-color: #fff;
+}
+
+#main_socialLogin .line h1{
+    font-size: 16px;
+}
+
+#main_socialLogin .icons{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#main_socialLogin .icons .icon{
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    background-color: #fff;
+}

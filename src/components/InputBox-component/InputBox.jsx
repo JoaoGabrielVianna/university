@@ -25,16 +25,15 @@ export const InputBox_background = () => {
     )
 }
 
-function InputBox({ text = 'Digite algo...', icon = ''}){
+export default function InputBox({ text = 'Digite algo...', icon = '', uid = ''}){
     return(
         <>
             <main id="main_inputBox">
                 <InputBox_background/>
                 <span  style={{backgroundColor: icon ? 'transparent' : '#0002'}}>{icon}</span>
-                <input type="text" placeholder= {text} />
+                <input type="text" placeholder= {text} id={uid !== '' ? uid : null} />
             </main>
         </>
     )
 }
 
-export default InputBox;

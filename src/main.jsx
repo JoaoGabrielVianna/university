@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './routes/App-screen/App'
+import Start_Screen from './routes/Start-screen/Start'
 import Error_Screen from './routes/Error-screen/Error'
 import Home_Screen from './routes/Home-screen/Home'
 import Login_Screen from './routes/Login-screen/Login'
@@ -13,19 +14,19 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <Error_Screen/>,
+    errorElement: <Error_Screen />,
     children: [
       {
-        path: '/',
-        element: <Home_Screen />
+        path: '/', element: <Start_Screen />
       },
       {
-        path: '/login',
-        element: <Login_Screen/>
+        path: '/login', element: <Login_Screen />
       },
       {
-        path: '/register',
-        element: <Register_Screen/>
+        path: '/register', element: <Register_Screen />
+      },
+      {
+        path: '/home', element: <Home_Screen />
       }
     ]
   }
@@ -33,9 +34,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
-    {/* <Login_Screen/> */}
-    {/* <Register_Screen /> */}
-    {/* <App /> */}
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

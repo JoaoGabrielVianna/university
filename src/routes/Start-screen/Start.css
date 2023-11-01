@@ -1,0 +1,22 @@
+#main_start {
+    min-width: 360px;
+    background-color: #020913;
+}
+
+#main_start .container {
+    width: 310px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#main_start .container h1{
+    font-size: 26px;
+}
+
+#main_start .container p{
+    font-size: 10px;
+}
