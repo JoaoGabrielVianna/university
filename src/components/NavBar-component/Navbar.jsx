@@ -9,7 +9,6 @@ import Profile_Icon from "./icons-component/profile-icon";
 import Indicator_Icon from "./icons-component/indicator";
 
 
-export const NavbarContext = createContext({})
 
 export default function NavBar() {
     const [active, setActive] = useState(2);
