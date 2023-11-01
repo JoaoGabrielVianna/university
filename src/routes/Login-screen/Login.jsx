@@ -1,8 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, Navigate } from "react-router-dom";
 
 import './Login.css';
-import { FacebookAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 
 import InputBox from "../../components/InputBox-component/InputBox";
 import ButtonLogin from "../../components/ButtonLogin-component/ButtonLogin";
@@ -13,35 +12,18 @@ import google from '../../assets/imgs/google-icon.png';
 import facebook from '../../assets/imgs/facebook-icon.png'
 import mobile from '../../assets/imgs/mobile-icon.png'
 import outlook from '../../assets/imgs/outlook-icon.png'
-import { app } from "../../services/firebaseConfig";
-
-
-const provider = new GoogleAuthProvider();
+import { AuthGoogleContext } from "../../contexts/authGoogle";
 
 
 
 
 export default function Login_Screen() {
+    const { signInGoogle, signed } = useContext(AuthGoogleContext)
 
-    const auth = getAuth(app);
-
-    const signInGoogle = () => {
-        signInWithPopup(auth, provider)
-            .then((result) => {
-                const credential = GoogleAuthProvider.credentialFromResult(result);
-                const token = credential.accessToken;
-                const user = result.user;
-                console.log(user);
-
-            }).catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                const email = error.customData.email;
-                const credential = GoogleAuthProvider.credentialFromError(error);
-
-            });
+    if(signed){
+        return <Navigate to="/home"/>
     }
-
+    else{
     return (
         <>
             <main id="main_login">
@@ -57,7 +39,7 @@ export default function Login_Screen() {
                             <span></span>
                         </div>
                         <div className="icons">
-                            <a><img src={google} alt="" onClick={signInGoogle} /></a>
+                            <a><img src={google} alt="" onClick={() => signInGoogle()} /></a>
                             <a style={{ opacity: 0.3 }}><img src={facebook} alt="" onClick={() => { }} /></a>
                             <a style={{ opacity: 0.3 }}><img src={mobile} alt="" onClick={() => { }} /></a>
                             <a style={{ opacity: 0.3 }}><img src={outlook} alt="" onClick={() => { }} /></a>
@@ -70,5 +52,6 @@ export default function Login_Screen() {
             </main>
         </>
     )
+    }
 }
 

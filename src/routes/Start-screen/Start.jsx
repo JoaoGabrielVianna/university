@@ -9,7 +9,6 @@ import ButtonRegister from "../../components/ButtonRegister-component/ButtonRegi
 
 export default function Start_Screen() {
 
-
     return (
         <>
             <main id="main_start">
