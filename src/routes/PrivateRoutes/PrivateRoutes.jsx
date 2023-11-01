@@ -5,6 +5,12 @@ import NavBar from "../../components/NavBar-component/Navbar";
 
 export const PrivateRoutes = () => {
     const { signed } = useContext(AuthGoogleContext);
-    return signed ? <><Outlet /> <NavBar/></> : <Navigate to="/"/>
-    
+    return (
+        signed ?
+            <>
+                <Outlet />
+                <NavBar />
+            </>
+            : <Navigate to="/" />)
+        
 }

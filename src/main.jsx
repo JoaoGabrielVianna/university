@@ -27,9 +27,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path='profile' element={<Profile_Screen />} />
           </Route>
 
-          <Route path='/profile' element={<PrivateRoutes />}>
-            <Route path='/profile' element={<Profile_Screen />} />
-          </Route>
 
 
           <Route path='/*' element={<Error_Screen />} />
@@ -39,4 +36,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </AuthGoogleProvider>
     
   </React.StrictMode>,
+  
 )
