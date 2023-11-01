@@ -57,9 +57,9 @@ export default function Login_Screen() {
                         </div>
                         <div className="icons">
                             <a><img src={google} alt=""  onClick={signInGoogle}/></a>
-                            <a><img src={facebook} alt=""  onClick={() => {}}/></a>
-                            <a><img src={mobile} alt=""  onClick={() => {}}/></a>
-                            <a><img src={outlook} alt=""  onClick={() => {}}/></a>
+                            <a style={{opacity: 0.3}}><img src={facebook} alt=""  onClick={() => {}}/></a>
+                            <a style={{opacity: 0.3}}><img src={mobile} alt=""  onClick={() => {}}/></a>
+                            <a style={{opacity: 0.3}}><img src={outlook} alt=""  onClick={() => {}}/></a>
                         </div>
                     </main>
 
