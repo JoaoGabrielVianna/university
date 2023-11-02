@@ -35,7 +35,7 @@ export default function Home_Screen() {
                     </div>
                     
                 </header>
-                <span className="body" style={{ height: showfaculdades ? "150px" : "0" }}>
+                <span className="body" style={{ height: showfaculdades ? "150px" : "0", opacity: showfaculdades ? 1 : 0 }}>
 
                     </span>
                 <h1>TELA HOME</h1>
