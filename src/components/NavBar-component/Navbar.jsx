@@ -32,7 +32,7 @@ export default function NavBar() {
                         {icons.map((id, i) => (
                             <li key={i} className="icon">
                                 {/* {active} */}
-                                <Link className="Link" to={id.local} onClick={() => setActive(i)}>
+                                <Link className="Link" to={id.local} onClick={() => { setActive(i); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
                                     {active === i ? id.icon_a : id.icon_d}
                                 </Link>
 

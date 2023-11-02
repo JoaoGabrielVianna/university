@@ -22,7 +22,7 @@
     align-items: flex-end;
     position: relative;
     border-top: 2px solid #FFFFFF;
-    background-color: #020913;
+    background-color: #0A121E;
 }
 
 
@@ -59,7 +59,7 @@
 #main_navbar span{
     display: flex;
     position: absolute;
-    top: -10px;
+    top: -10.52px;
     transition: .2s ease-in-out;
     z-index: 1;
     
