@@ -23,10 +23,10 @@ export default function Home_Screen() {
                         <span><img src={notification_icon} alt="" /></span>
                     </div>
 
-                    <div className="faculdades">
+                    <div className="faculdades" onClick={() => setShowfaculdades(!showfaculdades)}>
                         <span className="header">
                             <h1>Faculdades</h1>
-                            <div onClick={() => setShowfaculdades(!showfaculdades)}>
+                            <div >
                                 <img src={arrow_icon} alt="" />
                             </div>
 
