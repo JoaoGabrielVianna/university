@@ -17,7 +17,7 @@ export const AuthGoogleProvider = ({ children }) => {
             const sessionToken = sessionStorage.getItem("@AuthFireBase:token");
             const sessionUser = sessionStorage.getItem("@AuthFireBase:user");
 
-            if (sessionToken && sessionUser) {
+            if ( sessionUser) {
                 setUser(sessionUser);
             }
         };

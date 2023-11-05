@@ -1,6 +1,5 @@
 #main_start {
     min-width: 360px;
-    background-color: #020913;
 }
 
 #main_start .container {
@@ -13,10 +12,10 @@
     gap: 15px;
 }
 
-#main_start .container h1{
+#main_start .container h1 {
     font-size: 26px;
 }
 
-#main_start .container p{
+#main_start .container p {
     font-size: 10px;
 }

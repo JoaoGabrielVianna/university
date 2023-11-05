@@ -4,6 +4,7 @@ import { AuthGoogleContext } from "../../contexts/authGoogle";
 import search_icon from "../../assets/svgs/search-icon.svg";
 import arrow_icon from "../../assets/svgs/arrow-icon.svg";
 import notification_icon from "../../assets/svgs/notification-icon.svg";
+import FaculdadesSection from "../../components/FaculdadesSection-component/FaculdadesSection";
 
 export default function Home_Screen() {
     const [showfaculdades, setShowfaculdades] = useState(false)
@@ -33,11 +34,11 @@ export default function Home_Screen() {
 
 
                     </div>
-                    
+
                 </header>
                 <span className="body" style={{ height: showfaculdades ? "150px" : "0", opacity: showfaculdades ? 1 : 0 }}>
-
-                    </span>
+                    <FaculdadesSection/>
+                </span>
                 <h1>TELA HOME</h1>
 
 

@@ -1,0 +1,19 @@
+#main_faculs{
+    width: 65px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    /* background-color: green; */
+}
+
+#main_faculs h1{
+    font-size: 14px;
+    padding-bottom: 2px;
+    white-space: nowrap;
+}
+
+#main_faculs img{
+    width: 65px;
+}
