@@ -87,7 +87,7 @@
     width: 360px;
     height: 150px;
     display: flex;
-    position:relative ;
+    position:fixed ;
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
