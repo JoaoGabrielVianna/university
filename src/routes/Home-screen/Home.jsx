@@ -36,10 +36,12 @@ export default function Home_Screen() {
                     </div>
 
                 </header>
-                <span className="body" style={{ height: showfaculdades ? "150px" : "0", opacity: showfaculdades ? 1 : 0 }}>
-                    <FaculdadesSection/>
+                <span className="body" style={{ height: showfaculdades ? "150px" : "0", opacity: showfaculdades ? 1 : 0, position: showfaculdades ? 'absolute': 'relative' }}>
+                    <FaculdadesSection />
                 </span>
-                <h1>TELA HOME</h1>
+                <section style={{marginTop: showfaculdades ? '300px': ''}}>
+                    <h1>TELA HOME</h1>
+                </section>
 
 
             </main>

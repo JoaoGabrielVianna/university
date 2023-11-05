@@ -84,9 +84,10 @@
 }
 
 #main_home  .body{
-    width: 100%;
+    width: 360px;
     height: 150px;
     display: flex;
+    position:relative ;
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
@@ -94,7 +95,7 @@
     overflow-x: scroll;
 
     transition: .2s ease-in-out;
-    /* border-bottom: 2px solid #ffffff; */
+    border-bottom: 2px solid #ffffff;
 }
 
 #main_home  .body::-webkit-scrollbar{
@@ -104,4 +105,8 @@
 
 #main_home header .faculdades .header h1{
     font-size: 20px;
+}
+
+#main_home section{
+    background-color: green;
 }
